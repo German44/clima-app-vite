@@ -28,10 +28,10 @@ export default function Home() {
     };
 
     return (
-        <div className="bg-cover bg-no-repeat bg-center bg-site w-full h-screen">
-            <div className="flex flex-col items-center rounded bg-black/10 backdrop-blur-lg w-full h-screen">
+        <div className="bg-cover bg-no-repeat bg-center bg-site w-full h-[97vh]">
+            <div className="flex flex-col items-center rounded bg-black/10 backdrop-blur-lg w-full h-full">
                 {/* Input and title */}
-                <header className="w-full flex flex-wrap items-center justify-around  p-8">
+                <header className="w-full flex flex-wrap items-center justify-around mb-2">
                     <h1 className="text-3xl font-semibold">Weather App.</h1>
                     <div className="flex items-center mt-4 gap-5">
                         <TextField
@@ -50,7 +50,7 @@ export default function Home() {
                         <ButtonSearch getWeather={getWeather} loading={loading} />
                     </div>
                 </header>
-                <div className="w-3/4 lg:min-h-[700px] min-h-[500px] bg-white/10 backdrop-blur-lg p-4">
+                <div className="w-3/4 lg:min-h-[500px] min-h-[500px] bg-white/10 backdrop-blur-lg rounded-2xl p-4">
                     {weather.main && <CardData data={weather} />}
                 </div>
             </div>
