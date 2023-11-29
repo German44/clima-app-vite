@@ -13,7 +13,7 @@ export default function Home() {
 
     const getWeather = async (e) => {
         e.preventDefault();
-        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_WEATHER_KEY}`;
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=47345d2032f418a555d730a5a5de8422`;
         setLoading(true);
         try {
             const response = await axios.get(apiUrl);
@@ -48,6 +48,7 @@ export default function Home() {
                             }}
                         />
                         <ButtonSearch getWeather={getWeather} loading={loading} />
+                        <button onClick={getWeather}>prueba</button>
                     </div>
                 </header>
                 <div className="w-3/4 bg-white/10 backdrop-blur-lg p-4">
