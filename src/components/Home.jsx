@@ -54,7 +54,7 @@ export default function Home() {
                         <ButtonSearch getWeather={getWeather} loading={loading} />
                     </div>
                 </header>
-                <div className="w-3/4 lg:min-h-[500px] min-h-[500px] bg-white/10 backdrop-blur-lg rounded-2xl p-4">
+                <div className="mt-8 lg:mt-2 w-3/4 lg:min-h-[800px] min-h-[700px] bg-white/10 backdrop-blur-lg rounded-2xl p-4">
                     {weather.main && <CardData data={weather} />}
                 </div>
             </div>
