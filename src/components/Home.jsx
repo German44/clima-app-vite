@@ -48,7 +48,6 @@ export default function Home() {
                             }}
                         />
                         <ButtonSearch getWeather={getWeather} loading={loading} />
-                        <button onClick={getWeather}>prueba</button>
                     </div>
                 </header>
                 <div className="w-3/4 bg-white/10 backdrop-blur-lg p-4">
