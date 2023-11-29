@@ -10,10 +10,12 @@ export default function Home() {
     const [city, setCity] = useState("");
     const [weather, setWeather] = useState({});
     const [loading, setLoading] = useState(false);
+    const apiKey = import.meta.env.VITE_WEATHER_KEY;
+
 
     const getWeather = async (e) => {
         e.preventDefault();
-        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_WEATHER_KEY}`;
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
         setLoading(true);
         try {
             const response = await axios.get(apiUrl);
