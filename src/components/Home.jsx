@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useState} from 'react';
+import { useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import InputAdornment from '@mui/material/InputAdornment';
 import CardData from './CardData';
@@ -10,8 +10,10 @@ export default function Home() {
     const [city, setCity] = useState("");
     const [weather, setWeather] = useState({});
     const [loading, setLoading] = useState(false);
-    const apiKey = import.meta.env.VITE_WEATHER_KEY;
 
+
+    // const apiKey = import.meta.env.VITE_WEATHER_KEY;
+    const apiKey = "47345d2032f418a555d730a5a5de8422";
 
     const getWeather = async (e) => {
         e.preventDefault();
